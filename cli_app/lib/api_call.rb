@@ -29,8 +29,7 @@ class ApiCall
       response = Faraday.get(url)
 
       if response.status == 200
-        gem_list = JSON.parse(response.body).map { |gem| GemApi.new(gem['name'], gem['info'], gem['version']) }
-        Success.new(gem_list)
+        Success.new(JSON.parse(response.body))
       else
         Failure.new('message' => response.body)
       end 

@@ -7,19 +7,13 @@ require './lib/search_command'
 class CommandParser
   class << self
     def parse(argv)
-      # if argv[0] == 'show'
-      #   ShowCommand.create(argv[1..])
-      # else
-      #   HelpCommand.create
-      # end
-
-    case argv[0]
-    when 'show'
-      ShowCommand.create(argv[1..])
-    when 'search'
-      SearchCommand.create(argv[1..])
-    else 
-      HelpCommand.create
+      case argv[0]
+      when 'show'
+        ShowCommand.create(argv[1..])
+      when 'search'
+        SearchCommand.create(argv[1..])
+      else 
+        HelpCommand.create
     end
   end
   end

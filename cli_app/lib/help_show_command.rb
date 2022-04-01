@@ -1,6 +1,6 @@
 class HelpShowCommand
   def result
-    # TODO: Implement
-    'Introduce exactly the name of the gem without spaces'
+    'Introduce exactly the name of the gem without spaces:
+    ./cli.rb show <gem_name>'
   end
 end

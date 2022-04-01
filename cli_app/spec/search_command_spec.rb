@@ -17,4 +17,11 @@ RSpec.describe SearchCommand do
     it { is_expected.to be_a SearchCommand::SearchResult}
   end
 
+  describe '.removeOptions' do
+    let(:args) {['rails', 'on', '--most-downloads-first']}
+    subject(:search) {SearchCommand.removeOptions(args)}
+
+    it { is_expected.to eq ['rails', 'on']}
+  end
+
 end

@@ -5,6 +5,10 @@ class Result
     @data = data
   end
 
+  def data=(data)
+    @data = data
+  end
+
   def success?
     raise NotImplementedError
   end
